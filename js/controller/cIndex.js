@@ -51,8 +51,17 @@ function calculate (evento){
 		e.setFunc(ecu);
 		e.setVari(vari);
 
-		consola.value=consola.value+"Lamentablemente aun no funciona :(\n>";
+		consola.value=consola.value+"Lamentablemente aun no esta programado :(\n>";
 		document.getElementById("prompt").addEventListener("keyup",command);
 		document.getElementById("prompt").removeEventListener("keyup",calculate);
 	}
+}
+
+function validate(){
+	//Valida dentro del string: 
+	//	  - Hay solo una variable dentro de la ecuación
+	//	  - Hay un ( por cada )
+	//	  - No hay simbolos que no pertenezcan a una ecuación
+	//        - Si encuentra un decimal tiene que al menos empezar por un entero y no puede tener mas de un punto
+	return true;
 }
